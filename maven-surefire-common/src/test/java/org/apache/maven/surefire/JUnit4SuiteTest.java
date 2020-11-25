@@ -62,6 +62,7 @@ import org.apache.maven.surefire.extensions.StatelessTestsetInfoReporterTest;
 import org.apache.maven.surefire.report.FileReporterTest;
 import org.apache.maven.surefire.report.RunStatisticsTest;
 import org.apache.maven.surefire.spi.SPITest;
+import org.apache.maven.surefire.stream.EventDecoderTest;
 import org.apache.maven.surefire.util.RelocatorTest;
 
 /**
@@ -115,6 +116,7 @@ public class JUnit4SuiteTest extends TestCase
         suite.addTest( new JUnit4TestAdapter( StreamFeederTest.class ) );
         suite.addTest( new JUnit4TestAdapter( E2ETest.class ) );
         suite.addTest( new JUnit4TestAdapter( ThreadedStreamConsumerTest.class ) );
+        suite.addTest( new JUnit4TestAdapter( EventDecoderTest.class ) );
         suite.addTest( new JUnit4TestAdapter( EventConsumerThreadTest.class ) );
         return suite;
     }
